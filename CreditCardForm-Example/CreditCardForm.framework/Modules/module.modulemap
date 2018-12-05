@@ -1,0 +1,11 @@
+framework module CreditCardForm {
+  umbrella header "CreditCardForm.h"
+
+  export *
+  module * { export * }
+}
+
+module CreditCardForm.Swift {
+    header "CreditCardForm-Swift.h"
+    requires objc
+}

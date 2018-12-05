@@ -14,6 +14,10 @@
 		1837877921B6A99E004CB25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1837877721B6A99E004CB25E /* LaunchScreen.storyboard */; };
 		1837878421B6A99E004CB25E /* CreditCardForm_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837878321B6A99E004CB25E /* CreditCardForm_ExampleTests.swift */; };
 		1837878F21B6A99E004CB25E /* CreditCardForm_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837878E21B6A99E004CB25E /* CreditCardForm_ExampleUITests.swift */; };
+		1837879E21B6A9C6004CB25E /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837879C21B6A9C2004CB25E /* Stripe.framework */; };
+		1837879F21B6A9C6004CB25E /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1837879C21B6A9C2004CB25E /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		183787A321B6A9F2004CB25E /* CreditCardForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183787A121B6A9ED004CB25E /* CreditCardForm.framework */; };
+		183787A421B6A9F2004CB25E /* CreditCardForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183787A121B6A9ED004CB25E /* CreditCardForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		183787A021B6A9C6004CB25E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1837879F21B6A9C6004CB25E /* Stripe.framework in Embed Frameworks */,
+				183787A421B6A9F2004CB25E /* CreditCardForm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1837876B21B6A99D004CB25E /* CreditCardForm-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CreditCardForm-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1837876E21B6A99D004CB25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		1837878A21B6A99E004CB25E /* CreditCardForm-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CreditCardForm-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1837878E21B6A99E004CB25E /* CreditCardForm_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardForm_ExampleUITests.swift; sourceTree = "<group>"; };
 		1837879021B6A99E004CB25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1837879C21B6A9C2004CB25E /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Stripe.framework; sourceTree = "<group>"; };
+		183787A121B6A9ED004CB25E /* CreditCardForm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CreditCardForm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1837879E21B6A9C6004CB25E /* Stripe.framework in Frameworks */,
+				183787A321B6A9F2004CB25E /* CreditCardForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +120,8 @@
 		1837876D21B6A99D004CB25E /* CreditCardForm-Example */ = {
 			isa = PBXGroup;
 			children = (
+				183787A121B6A9ED004CB25E /* CreditCardForm.framework */,
+				1837879C21B6A9C2004CB25E /* Stripe.framework */,
 				1837876E21B6A99D004CB25E /* AppDelegate.swift */,
 				1837877021B6A99D004CB25E /* ViewController.swift */,
 				1837877221B6A99D004CB25E /* Main.storyboard */,
@@ -135,6 +160,7 @@
 				1837876721B6A99D004CB25E /* Sources */,
 				1837876821B6A99D004CB25E /* Frameworks */,
 				1837876921B6A99D004CB25E /* Resources */,
+				183787A021B6A9C6004CB25E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,6 +460,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S9QJRVP2S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CreditCardForm-Example",
+				);
 				INFOPLIST_FILE = "CreditCardForm-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +482,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S9QJRVP2S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CreditCardForm-Example",
+				);
 				INFOPLIST_FILE = "CreditCardForm-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
